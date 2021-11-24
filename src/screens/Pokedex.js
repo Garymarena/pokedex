@@ -10,6 +10,8 @@ import PokemonList from '../components/PokemonList';
 export default function Pokedex() {
     // Create a constant to set an empty array of pokemons
     const [ pokemons, setPokemons ] = useState([]);
+    // Set the loading more Pokemons run
+    const [nextUrl, setNextUrl] = useState(null);
     // console.log("pokemons--->", pokemons);
 
     useEffect(() => {
@@ -20,7 +22,8 @@ export default function Pokedex() {
 
     const loadPokemons = async () => {
         try {
-          const response = await getPokemonsApi();
+          const response = await getPokemonsApi(nextUrl);
+          setNextUrl(response.next);
           
           // Now on the empty array lets bring the Data we need to show the Json format info to set the Data
           const pokemonsArray = [];
@@ -48,7 +51,10 @@ export default function Pokedex() {
 
     return (
         <SafeAreaView>
-            <PokemonList pokemons={pokemons} />
+            <PokemonList pokemons={pokemons} 
+            loadPokemons={loadPokemons}
+            isNext={nextUrl}
+            />
         </SafeAreaView>
     );
 }
