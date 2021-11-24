@@ -10,7 +10,7 @@ import PokemonList from '../components/PokemonList';
 export default function Pokedex() {
     // Create a constant to set an empty array of pokemons
     const [ pokemons, setPokemons ] = useState([]);
-    console.log("pokemons--->", pokemons);
+    // console.log("pokemons--->", pokemons);
 
     useEffect(() => {
         (async () => {
