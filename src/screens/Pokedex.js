@@ -34,7 +34,7 @@ export default function Pokedex() {
                   name: pokemonDetails.name,
                   type: pokemonDetails.types[0].type.name,
                   order: pokemonDetails.order,
-                  img: pokemonDetails.sprites.other["official-artwork"].front_default,
+                  image: pokemonDetails.sprites.other["official-artwork"].front_default,
               });
           }
 
