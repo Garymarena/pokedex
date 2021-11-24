@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Text } from 'react-native';
 import { SafeAreaView } from "react-native-safe-area-context";
 import { getPokemonsApi, getPokemonDetailsByUrlApi } from "../api/pokemon";
-import PokemonList from '../components/PokemonList';
+import PokemonList from "../components/PokemonList";
 
 // useEfect is activate when the component is mount
 // useState safe data and reload if the component change
@@ -12,7 +12,6 @@ export default function Pokedex() {
     const [ pokemons, setPokemons ] = useState([]);
     // Set the loading more Pokemons run
     const [nextUrl, setNextUrl] = useState(null);
-    // console.log("pokemons--->", pokemons);
 
     useEffect(() => {
         (async () => {

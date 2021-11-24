@@ -7,18 +7,19 @@ import {
   TouchableWithoutFeedback,
 } from "react-native";
 import { capitalize } from "lodash";
+import { useNavigation } from "@react-navigation/native";
 import getColorByPokemonType from "../utils/getColorByPokemonType";
 
 // Lets create a prop to the PokeCard 
 export default function PokemonCard(props) {
     const { pokemon } = props;
+    const navigation = useNavigation();
 
     const pokemonColor = getColorByPokemonType(pokemon.type);
     const bgStyles = { backgroundColor: pokemonColor, ...styles.bgStyles };
 
     const goToPokemon = () => {
-        console.log(`Vamos al pokemon: ${pokemon.name}`);
-        console.log(pokemon);
+      navigation.navigate("Pokemon", { id: pokemon.id });
       };
     // Render the PokeCard with the data we need to show in the Pokedex
     return (
