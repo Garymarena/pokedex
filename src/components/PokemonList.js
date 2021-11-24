@@ -1,6 +1,5 @@
 import React from "react";
 import { StyleSheet, Text, FlatList, ActivityIndicator, Platform } from "react-native";
-// import the PokemonCard Component
 import PokemonCard from "./PokemonCard";
 // Let's build this prop to List our items using FlatList
 

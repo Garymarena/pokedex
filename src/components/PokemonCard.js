@@ -20,7 +20,7 @@ export default function PokemonCard(props) {
 
     // Lets change de console.log to a navigation route
     const goToPokemon = () => {
-        navigation.navigate("Pokemon", { id: pokemon.is });
+      navigation.navigate("Pokemon", { id: pokemon.id });
       };
     // Render the PokeCard with the data we need to show in the Pokedex
     return (
