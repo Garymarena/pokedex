@@ -1,9 +1,9 @@
-
 import React, { useState, useEffect } from 'react'
 import { ScrollView } from "react-native";
 import { getPokemonDetailsApi } from "../api/pokemon";
 import Header from '../components/Pokemon/Header';
 import Type from '../components/Pokemon/Type';
+import Stats from "../components/Pokemon/Stats";
 
 // Create a new prop to catch all data from especific pokemon
 
@@ -27,7 +27,6 @@ export default function Pokemon(props) {
 
   if (!pokemon) return null;
 
-  // Render the specific card of each Pokémon
   return (
     <ScrollView>
       <Header
@@ -37,20 +36,7 @@ export default function Pokemon(props) {
         type={pokemon.types[0].type.name}
       />
       <Type types={pokemon.types} />
+      <Stats stats={pokemon.stats} />
     </ScrollView>
   );
-=======
-import React from 'react'
-import { View, Text } from 'react-native'
-
-export default function Pokemon(props) {
-    // Create a new prop for the navigation route
-    const { navigation, route } = props;
-    console.log(route);
-
-    return (
-        <View>
-            <Text>Estamos en la vista de un Pokémon</Text>
-        </View>
-    )
 }
