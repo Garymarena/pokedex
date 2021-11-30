@@ -2,7 +2,21 @@
 
 In the project directory, you can run:
 
+git clone https://github.com/Garymarena/pokedex.git
+
+cd pokedex
+
+npm install --global expo-cli
+
+yarn dev
+
 yarn start
+
+# Screenshots
+
+![Screenshot](pokedex.png)
+![Screenshot](pokedex2.png)
+![Screenshot](pokedex3.png)
 
 # Rules
 
