@@ -1,4 +1,4 @@
-# pokedex
+# POKEDEX
 
 In the project directory, you can run:
 
@@ -12,13 +12,13 @@ yarn dev
 
 yarn start
 
-# Screenshots
+# SREENSHOTS
 
 ![Screenshot](pokedex.png)
 ![Screenshot](pokedex2.png)
 ![Screenshot](pokedex3.png)
 
-# Rules
+# RULES
 
 a) Crear una aplicación con React Native que use la API para crear un “Pokedex” al estilo Pokemon
 API
